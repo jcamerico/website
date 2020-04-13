@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>João Claudio Américo's personal website</title>
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+        body {font-family: "Open Sans"}
+    </style>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div class="w3-bar w3-black w3-hide-small toolbar-link">
+    <a href="http://www.facebook.com/jcamerico" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+    <a href="http://www.twitter.com/andjcsaid" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+    <a href="http://www.linkedin.com/in/jcamerico" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+</div>
+<header id="main-header">
+    <img src="imgs/jc.jpg" alt="João Claudio Américo" id="portrait" class="w3-hover-opacity">
+    <div class="text-header">
+        <h1>João RODRIGUES AMÉRICO</h1>
+        <h4>Ph.d in Computer Science, Software engineer.<br>Based in Paris, France.</h4>
+    </div>
+</header>
+
+<nav>
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button w3-red" onclick="openSection(event, 'home')">Home</button>
+        <button class="w3-bar-item w3-button" onclick="openSection(event, 'cv')">Detailed CV</button>
+        <button class="w3-bar-item w3-button" onclick="openSection(event, 'contact')">Contact</button>
+    </div>
+</nav>
+<div id="tabs-content">
+    <section id="home" class="open">
+        <article>
+            <p>Hello! Welcome to my personal webpage.</p>
+            <p>I am currently a senior software developer at Murex, a financial software company in Paris, France. Developer since 2005, Java developer since 2008.</p>
+            <p>I possess both Brazilian and French citizenships.</p>
+            <p>I have obtained a PhD degree in Computer Science from Joseph Fourier University (Grenoble, France) in 2013. My thesis focused on software engineering approaches (more specifically service-based approaches) for real-time systems. In other words, it is about how to design time-critical software (e.g. software used in banks, military artefacts, or medical healthcare) cheaper and easier.</p>
+            <p>I have also a Master degree from the Ecole Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble (ENSIMAG) with high honors (Mention bien) and a Bachelor degree from the Universidade Federal do Rio Grande do Sul (UFRGS) with the highest honors (laurea acadêmica)</p>
+            <p>Outside computer science, my main interests are volleyball and video games.</p>
+        </article>
+    </section>
+    <section id="cv" class="closed">
+        <article>
+            <a href="files/CV-Americo-EN-Short.pdf" download="CV-Americo-Joao.pdf">Download CV as of Jan/17</a>
+        </article>
+        <article>
+            <h3>Work Experience</h3>
+            <p>My first work experience was in 2003. I was at high school, I did an internship in a biochemistry lab of the Federal University of Rio Grande do Sul (UFRGS), in Porto Alegre, my hometown. At the time, Prof. Dr. Diogo Onofre Gomes de Souza and his team were doing courses about memory and learning to students of four public high schools. I was chosen to be one of the 10 students of my school who were going to attend the courses. In the end of the courses, among the 40 students, they have chosen 4 to do an one-year internship in the Biochemistry lab. Fortunately, I was one of these students. The internship experience was so good that even when I started my bachelor's degree studies in Computer Science (that is, something not directly related to biochemistry) I've been invited to continue doing my internship with Prof. Diogo. And I stayed there for 5 years, from November 2003 until July 2008, when I left Brazil in order to start my double degree studies in Grenoble, France. In the beginning of this internship, my activities were all related to biochemistry and biology (manipulation of chemical compounds and animal experimentation - white mice and rats, just like in the movies). However, as I was doing my studies in Computer Science, I started to mainly perform computer-related activities (article redaction, data manipulation) and from 2006 until mid-2008 I administrated their website and developed software for image manipulation and densitometry.</p>
+            <p>In the end of the first academic year in Grenoble, I had to do a six-month internship in order to validate my French Engineer's degree. I did my internship at Bull S.A.S., a French computer company in Echirolles, a city in the suburbs of Grenoble. My advisors were (the not yet Dr.) Walter Rudametkin and Dr. François Exertier. This internship consisted in creating a real-time prototype of the JOnAS 5 Application Server, by means of bytecode injection of RTSJ-compliant code. This subject was proposed by Walter Rudametkin and his PhD Advisor, Prof. Dr. Didier Donsez.</p>
+            <p>Knowing that I'd have to do another internship in the following year, Walter and Didier offered me a research internship in their laboratory at LIG (Grenoble Informatics Laboratory), involving real-time, Java and OSGi. As these three words were topics that interested me a lot, I accepted. This second internship consisted of studying the impacts of real-time constraints in OSGi and, at same time, the impact of OSGi's dynamism in real-time Java applications. The conflict between real-time and dynamism in Java interested me so much, that I decided to do my PhD studies on it.</p>
+            <p>My PhD studies were financed by Bull S.A.S., where I was employed as a R&D Engineer. You may find more about my thesis subject below.</p>
+            <p>Two weeks after presenting my PhD thesis, in november 2013, I started working at Murex, a financial software editor in Paris. I was hired as a junior developer in the Core Technologies - Workflow development team, led back then by Ms. Nadine Daccache. This team was responsible for MxMLExchange, the post trade workflow engine of old MX.G2000 and MX.3. I was hired to be the dev lead of the business rules engine module, responsible for storing and executing business rules developed in several technologies (SQL, XSL, Java and other proprietary formats).</p>
+            <p>Fast forward to the present day, I am the current Architect and Software Function Owner of MxMLExchange, and team lead of 7 very competent developers. I am also the operational manager of some of these developers.</p>
+            <p>My daily work involves the following keywords:</p>
+            <ul>
+                <li>Java (Migrating from Java 8 to 11)</li>
+                <li>Issues arising from distributed and multithreaded applications</li>
+                <li>Continuous integration/deployment solutions like Jenkins/CJE</li>
+                <li>Messaging-based integration solutions for Java like Apache Camel and JMS</li>
+                <li>Dependency injection (through Spring and CDI)</li>
+                <li>Project management tools like Git/Perforce, Apache Maven, Sonar</li>
+                <li>TDD (Junit), BDD (Cucumber)</li>
+                <li>Agile/Scrum methodologies, from daily stand ups to retrospective facilitation</li>
+                <li>A good amount of IntelliJ, although Sublime is quite nice for non-Java stuff</li>
+                <li>Operational management tasks in general (support, regular meetings and feedback)</li>
+                <li>Technical design and documentation</li>
+                <li>Level 3 support</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Educational background</h3>
+            <p>In 2005, I started my undergraduate degree studies in Computer Science at the Federal University of Rio Grande do Sul (UFRGS), one of the biggest and best universities in Brazil. These studies consisted of a nine-semester program, in which we had courses of the main domains of Computer Science (Computational theory, Artificial Intelligence, Computer Graphics, Image Processing, Operating Systems, Algorithm Complexity, etc). In the seventh semester (2008/1), I was chosen to be one of the students who could finish his undergraduate degree studies in other country, in order to obtain a Double Degree. Since I could speak French fluently, I have chosen Grenoble as destination.</p>
+            <p>During 2 years, I studied at Grenoble Institut of Technology (formerly INPG) and obtained an Engineer (academic specialization in Information Systems Engineering) and a Master (specialization in Information Systems and Advanced Software Engineering) degrees from ENSIMAG (École Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble, one of the best Informatics schools in France), both with Mention Bien. Back to Brazil, I got my BSc Degree in Computer Science in September 2010, with Laurea Academica (an award given to those who obtained an A ranking on over 80% of courses) as well as the Highlight Student Award from the Brazilian Society of Computer Science.</p>
+            <p>I have earned a doctoral degree in Computer Science from the University of Grenoble in November 2013. My thesis subject was entitled "A component meta-model for the design of flexible and modular real-time applications", and it was supervised by Prof. Dr. Didier Donsez. In my reading and examination committee there were Profs. Lionel Seinturier, Jean Bézivin (reading commitee), Frédéric Mallet, Andy Wellings (examination committee) and Florence Maraninchi (chair). At Bull, my thesis was supervised by Dr. François Exertier and M. Frédéric Soinne.</p>
+            <p>If you want to know a bit more about my thesis project, you can download the manuscript in the link below:</p>
+            <a href="files/AmericoThesis.pdf" download="Phd-Thesis-Americo-Joao.pdf">Download PhD Thesis manuscript</a>
+        </article>
+        <article>
+            <h3>Competences</h3>
+            <h4>Languages</h4>
+            <ul>
+                <li><em>Portuguese:</em> Native Language.</li>
+                <li><em>English:</em> Fluent (Gold level at TOEIC, in 2009). I started learning it at school, when I was 10 years old. Some of my favorite bands at the time were american or english. That encouraged me to improve my english skills, what turned out to be very useful afterwards, when I started reading scientific papers and studying computer science.</li>
+                <li><em>French:</em> Fluent (C1 Level, according to CECR, in 2009). French is my second language, I speak it since I'm 5 years old. I had french classes during the whole primary education (8 years, in Brazil). I still have a slight accent, but that's part of life.</li>
+                <li><em>Japanese and Greek:</em> I've started getting Japanese and Greek lessons, but did not have enough time yet to learn more than notions of both languages.</li>
+            </ul>
+            <h4>Web Technologies</h4>
+            <p>I have learnt basic Javascript, CSS and HTML on my own. Recently I have started playing with HTML5, CSS3 and Javascript frameworks (like Node and Angular).</p>
+            <p>I can also use Java, J2EE, JSP, Servlets, JSF, XML, XHTML, GWT and Web Services.</p>
+            <p>I'm more into the back-end part of the systems though.</p>
+            <h4>Programming languages</h4>
+            <p>At the university, I have learned to program in Pascal, C/C++, Java and Python (in that order, which does not mean preference).</p>
+            <p>I'd say that Java is the language I'm more used to program in, and by far, the language which I have more experience with.</p>
+            <h4>Other:</h4>
+            <ul>
+                <li><em>Database:</em> SQL Server (Derby, HSQL, MySQL), Oracle</li>
+                <li><em>Operating Systems:</em> Linux (Work), Windows (Work), Mac OS (My laptop), Solaris (Master thesis)</li>
+                <li><em>IDEs:</em> IntelliJ, Eclipse.</li>
+                <li><em>Project Management Tools:</em> SVN/Perforce, Maven, Ant, Git, Jenkins, Sonar.</li>
+                <li><em>Unit test:</em> JUnit, Mockito, Cucumber</li>
+                <li><em>Others:</em> LaTeX, Android SDK</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Publications</h3>
+            <ul>
+                <li>Viola GG, Rodrigues L, Américo JC, Hansel G, Vargas RS, Biasibetti R, Swarowsky A, Gonalves CA, Xavier LL, Achaval M, Souza DO, Amaral OB. “Morphological changes in hippocampal astrocytes induced by environmental enrichment in mice”.  In Brain Research, Volume 1274, 5 June 2009, 47-54, ISSN 0006-8993</li>
+                <li>Américo JC, Rudametkin W, Donsez D. “Managing the Dynamism of Real-Time Java Applications on the OSGi Platform”. In Proceedings of the 27th Annual ACM Symposium on Applied Computing (SAC '12). ACM, New York, NY, USA, 1115-1122. DOI=10.1145/2231936.2231952</li>
+                <li>Calmant T, Américo JC, Donsez D, Gattaz O, Gama K. “A Dynamic and Service-Oriented Component Model for Python Long-Lived Applications”. In Proceedings of the 15th ACM SIGSOFT symposium on Component Based Software Engineering (CBSE '12). ACM, New York, NY, USA, 35-40. DOI=10.1145/2304736.2304744</li>
+                <li>Américo JC, Donsez D. “Service Component Architecture Extensions for Dynamic Systems”. In Proceedings of the 10th international conference on Service-Oriented Computing (ICSOC'12), Chengfei Liu, Heiko Ludwig, Farouk Toumani, and Qi Yu (Eds.). Springer-Verlag, Berlin, Heidelberg, 32-47. DOI=10.1007/978-3-642-34321-6_3</li>
+                <li>Calmant T, Américo JC, Donsez D, Gattaz O.  "A Dynamic SCA­-Based System for Smart Homes and Offices". In Service-Oriented Computing - ICSOC 2012 Workshops - Lecture Notes in Computer Science Volume 7759, 2013, 435-438. DOI=10.1007/978-3-642-37804-1_47</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Patents (in French)</h3>
+            <ul>
+                <li><a href="http://bases-brevets.inpi.fr/en/document/FR3012896.html" target="_blank"><em>FR3012896</em></a>  - Procédé de validation du temps de réponse d'une application, procédé de déploiement d'une application comportant un tel procédé de validation, programme d'ordinateur et dispositifs correspondants.</li>
+                <li><a href="https://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&NR=2016092174A1&KC=A1&FT=D&locale=fr_EP" target="_blank"><em>FR3029658</em></a> - Système et méthode de transformation de code octal Java en code octal Java temps-réel</li>
+            </ul>
+        </article>
+    </section>
+    <section id="contact" class="closed">
+        <article>
+            Please send your messages to jc@jcamerico.com or send me an InMail on <a href="http://www.linkedin.com/in/jcamerico">LinkedIn</a>.
+        </article>
+    </section>
+</div>
+<footer class="w3-container, w3-black">
+    <p>Developed by myself with some very quick and basic HTML5, CSS3 and Javascript. Code source is on <a href="http://github.com/jcamerico/website">Github</a>. Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>.</p>
+</footer>
+</body>
+</html>
