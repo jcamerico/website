@@ -6,13 +6,16 @@ jobs:
   deploy:
     docker:
       - image: cimg/base:2021.02
-    working_directory: ~/website
     steps:
       - checkout
       - run:
-          name: Deploy Over SSH
+          name: Deploy Files Over SSH
           command: |
-             scp -r ~/website "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v index.html "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v -r css "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v -r files "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v -r imgs "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v -r js "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
 
 workflows:
 
