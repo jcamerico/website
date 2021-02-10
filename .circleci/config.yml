@@ -11,11 +11,11 @@ jobs:
       - run:
           name: Deploy Files Over SSH
           command: |
-             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v index.html "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
-             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v -r css "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
-             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v -r files "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
-             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v -r imgs "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
-             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v -r js "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null index.html "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r css "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r files "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r imgs "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r js "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
 
 workflows:
 
@@ -26,4 +26,4 @@ workflows:
       - deploy:
           filters:
             branches:
-              only: circleci-project-setup # FIXME replace by master once tested
+              only: master
