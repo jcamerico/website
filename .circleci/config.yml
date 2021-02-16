@@ -12,10 +12,10 @@ jobs:
           name: Deploy Files Over SSH
           command: |
              scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null index.html "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
+             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null favicon.ico "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
              scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r css "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
              scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r files "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
              scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r imgs "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
-             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r js "$SSH_USER@$SSH_HOST:$SSH_DEPLOY_PATH"
 
 workflows:
 
