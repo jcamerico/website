@@ -1,0 +1,99 @@
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Taviraj', sans-serif;
+  color: #0a043c;
+  line-height: 2;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+a {
+  color: #03506f;
+}
+
+/* Sections */
+
+.section-separator {
+  border-top: 5px dotted;
+  width: 7%;
+  color: #03506f;
+}
+
+.section-header {
+  margin: 5% 0;
+}
+
+.colored-panel {
+  background-color: #ffe3d8;
+}
+
+/* Navigation bar */
+
+.nav-item {
+  padding: 0 20px;
+}
+
+/* Title header */
+
+#title-header {
+  text-align: center;
+  color: #0a043c;
+  padding: 7% 15%;
+}
+
+.name-heading {
+  font-size: 3rem;
+}
+
+.img-eiffel-tower {
+  width: 100px;
+}
+
+/* About section */
+
+.portrait {
+  text-align: center;
+  border-radius: 100%;
+  width: 250px;
+  border: 1px dotted;
+}
+
+.company-logo {
+  width: 50px;
+  height: auto;
+}
+
+#about {
+  line-height: 1.5;
+  padding: 6% 12% 3%;
+}
+
+.badge {
+  font-size: 1rem;
+}
+
+/* Competences section */
+
+.language-icon {
+  width: 30px;
+}
+
+/* Contact section */
+
+#contact {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 5%;
+  padding: 7% 15% 3%;
+}
+
+.social-icon {
+  padding: 3%;
+}
+
