@@ -13,408 +13,443 @@
     />
     <meta name="author" content="João Claudio Américo" />
     <title>João Claudio Américo's personal website</title>
-    <link rel="stylesheet" href="css/mainStyle.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Oswald"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open Sans"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="js/script.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/cb58933ede.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
   </head>
 
   <body>
-    <div class="w3-bar w3-black w3-hide-small toolbar-link">
-      <a href="http://www.facebook.com/jcamerico" class="w3-bar-item w3-button">
-        <i class="fa fa-facebook-official"></i>
-      </a>
-      <a href="http://www.twitter.com/andjcsaid" class="w3-bar-item w3-button">
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a
-        href="http://www.linkedin.com/in/jcamerico"
-        class="w3-bar-item w3-button"
-      >
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </div>
-    <header id="main-header">
-      <img
-        src="imgs/jc.jpg"
-        alt="João Claudio Américo"
-        id="portrait"
-        class="w3-hover-opacity"
-      />
-      <div class="text-header">
-        <h1>João RODRIGUES AMÉRICO</h1>
-        <h4>
-          Ph.d in Computer Science, Software engineer.<br />Based in Paris,
-          France.
-        </h4>
+    <header id="title" class="colored-panel">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">CV</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="#work">Work experience</a></li>
+                <li><a class="dropdown-item" href="#education">Educational background</a></li>
+                <li><a class="dropdown-item" href="#competences">Competences</a></li>
+                <li><a class="dropdown-item" href="#publications">Publications</a></li>
+                <li><a class="dropdown-item" href="#patents">Patents</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="title-header" >
+        <h1 class="name-heading">João Américo</h1>
+        <p>Ph.d in Computer Science, Software engineer.</p>
+        <p>Currently based in Paris, France.</p>
+        <img class= "img-eiffel-tower" src="/imgs/eiffel-tower.png">
       </div>
     </header>
 
-    <nav>
-      <div class="w3-bar w3-black">
-        <button
-          class="w3-bar-item w3-button w3-red"
-          onclick="openSection(event, 'home')"
-        >
-          Home
-        </button>
-        <button
-          class="w3-bar-item w3-button"
-          onclick="openSection(event, 'cv')"
-        >
-          Detailed CV
-        </button>
-        <button
-          class="w3-bar-item w3-button"
-          onclick="openSection(event, 'contact')"
-        >
-          Contact
-        </button>
-      </div>
-    </nav>
-    <div id="tabs-content">
-      <section id="home" class="open">
-        <article>
-          <p>Hello! Welcome to my personal webpage.</p>
-          <p>
-            I am currently a senior software developer at Murex, a financial
-            software company in Paris, France. Developer since 2005, Java
-            developer since 2008.
-          </p>
-          <p>I possess both Brazilian and French citizenships.</p>
-          <p>
-            I have obtained a PhD degree in Computer Science from Joseph Fourier
-            University (Grenoble, France) in 2013. My thesis focused on software
-            engineering approaches (more specifically service-based approaches)
-            for real-time systems. In other words, it is about how to design
-            reusable time-critical software (e.g. software used in banks,
-            military artefacts, or medical healthcare).
-          </p>
-          <p>
-            I have also a Master degree from the Ecole Nationale Supérieure
-            d'Informatique et Mathématiques Appliquées de Grenoble (ENSIMAG)
-            with high honors (Mention bien) and a Bachelor degree from the
-            Universidade Federal do Rio Grande do Sul (UFRGS) with the highest
-            honors (laurea acadêmica)
-          </p>
-          <p>
-            Besides computer science, my main interests are volleyball and video
-            games.
-          </p>
-        </article>
-      </section>
-      <section id="cv" class="closed">
-        <article>
-          <a href="cv/cv.pdf" download="cv.pdf">Download CV as of Feb/21</a>
-        </article>
-        <article>
-          <h3>Work Experience</h3>
-          <p>
-            My first work experience was in 2003. During high school, I did an
-            internship in a biochemistry lab of the Federal University of Rio
-            Grande do Sul (UFRGS), in Porto Alegre, my hometown. At the time,
-            Prof. Dr. Diogo Onofre Gomes de Souza and his team were doing
-            courses about memory and learning to students of four public high
-            schools. I was chosen to be one of the ten students of my school who
-            were going to attend the courses. In the end of the courses, among
-            the forty students, they have chosen four to do an one-year
-            internship in the Biochemistry lab. Fortunately, I was one of these
-            students. The internship went so well that even when I started my
-            bachelor's degree studies in Computer Science (that is, something
-            unrelated to biochemistry) I've been invited to continue doing my
-            internship with Prof. Dr. Diogo. And I stayed there for five years,
-            from November 2003 until July 2008, when I left Brazil in order to
-            start my double degree studies in Grenoble, France. In the beginning
-            of this internship, my activities were all related to biochemistry
-            and biology (manipulation of chemical compounds and animal
-            experimentation). However, as I was doing my studies in Computer
-            Science, I started to mainly perform computer-related activities
-            (article redaction, data manipulation) and from 2006 until mid-2008
-            I administrated their website and developed software for imaging
-            analysis and astrocytes densitometry.
-          </p>
-          <p>
-            In the end of the first academic year in Grenoble, I did a six-month
-            internship at Bull S.A.S. in order to validate my French Engineer's
-            degree. My advisors were Dr. Walter Rudametkin and Dr. François
-            Exertier. This internship consisted in creating a real-time
-            prototype of the JOnAS 5 Application Server, by means of bytecode
-            injection of RTSJ-compliant code. This subject was proposed by Dr.
-            Rudametkin and his PhD Advisor, Prof. Dr. Didier Donsez.
-          </p>
-          <p>
-            Knowing that I'd have to do another internship in the following
-            year, Walter and Didier offered me a research internship in their
-            laboratory at LIG (Grenoble Informatics Laboratory), involving
-            real-time, Java and OSGi. As these three words were topics that
-            interested me a lot, I accepted. This second internship consisted of
-            studying the impacts of real-time constraints in OSGi and, at same
-            time, the impact of OSGi's dynamism in real-time Java applications.
-            The conflict between real-time and dynamic architectures in Java
-            interested me so much, that I decided to do my PhD studies on it.
-          </p>
-          <p>
-            My PhD studies were financed by Bull S.A.S., where I was employed as
-            a R&D Engineer. You may find more about my thesis subject below.
-          </p>
-          <p>
-            Two weeks after presenting my PhD thesis, in November 2013, I
-            started working at Murex, a financial software editor in Paris. I
-            was hired as a junior developer in the Core Technologies - Workflow
-            development team, led back then by Ms. Nadine Daccache. This team
-            was responsible for MxMLExchange, the post-trade workflow engine of
-            old MX.G2000 and MX.3. I was hired to be the lead developer of the
-            business rules engine module, responsible for storing and executing
-            business rules developed in several technologies.
-          </p>
-          <p>
-            Fast forward to the present day, System Architect and Software
-            Function Owner of MxMLExchange, leading a team composed of seven
-            developers, a product owner and a quality analyst distributed in
-            three countries. I am also the operational manager of some of these
-            developers.
-          </p>
-          <p>My daily work involves the following topics:</p>
-          <ul>
-            <li>Java (used all versions from 6 to 11)</li>
-            <li>
-              Analysing technical and performance issues arising from
-              distributed and multithreaded applications
-            </li>
-            <li>
-              Continuous integration/deployment solutions like Jenkins/CJE
-            </li>
-            <li>
-              Messaging-based integration solutions for Java like Apache Camel
-              and JMS
-            </li>
-            <li>Dependency injection (through Spring and CDI)</li>
-            <li>
-              Project management tools like Git/Perforce, Apache Maven, Sonar
-            </li>
-            <li>TDD (Junit), BDD (Cucumber)</li>
-            <li>
-              Agile/Scrum methodologies, from daily stand ups to retrospective
-              facilitation
-            </li>
-            <li>
-              A good amount of IntelliJ, although Sublime is quite nice for
-              non-Java stuff
-            </li>
-            <li>
-              Operational management tasks in general (support, regular meetings
-              and feedback)
-            </li>
-            <li>Technical design and documentation</li>
-            <li>Level 3 support</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Educational background</h3>
-          <p>
-            In 2005, I started my undergraduate degree studies in Computer
-            Science at the Federal University of Rio Grande do Sul (UFRGS), one
-            of the biggest and best universities in Brazil. These studies
-            consisted of a nine-semester program, in which we had courses about
-            the main domains of Computer Science (Computational theory,
-            Artificial Intelligence, Computer Graphics, Image Processing,
-            Operating Systems, Algorithm Complexity, etc). In the seventh
-            semester (2008/1), I obtained a scholarship to finish my
-            undergraduate degree studies in other country, in order to obtain a
-            Double Degree. Since I could speak French fluently, I have chosen
-            Grenoble as destination.
-          </p>
-          <p>
-            For two years, I studied at Grenoble Institut of Technology
-            (formerly INPG) and obtained an Engineer (academic specialization in
-            Information Systems Engineering) and a Master (specialization in
-            Information Systems and Advanced Software Engineering) degrees from
-            ENSIMAG (École Nationale Supérieure d'Informatique et Mathématiques
-            Appliquées de Grenoble, one of the best Informatics schools in
-            France), both with Mention Bien. Back to Brazil, I got my BSc Degree
-            in Computer Science in September 2010, with Laurea Academica (an
-            award given to those who obtained an A ranking on over 80% of
-            courses) as well as the Highlight Student Award from the Brazilian
-            Society of Computer Science.
-          </p>
-          <p>
-            I have earned a doctoral degree in Computer Science from the
-            University of Grenoble in November 2013. My thesis subject was
-            entitled "A component meta-model for the design of flexible and
-            modular real-time applications", and it was supervised by Prof. Dr.
-            Didier Donsez. In my reading and examination committee there were
-            Profs. Lionel Seinturier, Jean Bézivin (reading commitee), Frédéric
-            Mallet, Andy Wellings (examination committee) and Florence
-            Maraninchi (chair). At Bull, my thesis was supervised by Dr.
-            François Exertier and M. Frédéric Soinne.
-          </p>
-          <p>
-            If you want to know a bit more about my thesis project, you can
-            download the manuscript in the link below:
-          </p>
-          <a
-            href="files/AmericoThesis.pdf"
-            download="Phd-Thesis-Americo-Joao.pdf"
-            >Download PhD Thesis manuscript</a
-          >
-        </article>
-        <article>
-          <h3>Competences</h3>
-          <h4>Languages</h4>
-          <ul>
-            <li><em>Portuguese:</em> Native Language.</li>
-            <li>
-              <em>English:</em> Fluent (Gold level at TOEIC, in 2009). I started
-              learning it at school, when I was 10 years old. Some of my
-              favorite bands at the time were American or English. That
-              encouraged me to improve my english skills, what turned out to be
-              very useful afterwards, when I started reading scientific papers
-              and studying computer science.
-            </li>
-            <li>
-              <em>French:</em> Fluent (C1 Level, according to CECR, in 2009).
-              French is my second language, I speak it since I'm 5 years old. I
-              had french classes during the whole primary education (8 years, in
-              Brazil).
-            </li>
-            <li>
-              <em>Japanese and Greek:</em> I've started getting Japanese and
-              Greek lessons, but did not have enough time yet to learn more than
-              notions of both languages.
-            </li>
-          </ul>
-          <h4>Web Technologies</h4>
-          <p>
-            I am a self-taught Javascript, CSS and HTML developer. On some of my
-            free time, I have been playing with Javascript frameworks (like Node
-            and Angular).
-          </p>
-          <p>
-            I can also use Java-based web technologies like JSP, Servlets, JSF,
-            XML, XHTML, GWT and Web Services.
-          </p>
-          <p>I'm more interested in back-end code.</p>
-          <h4>Programming languages</h4>
-          <p>
-            At the university, I have learned to program in Pascal, C/C++, Java
-            and Python (in that order, which does not mean preference).
-          </p>
-          <p>
-            Java is definitely my go-to programming language for heavy
-            server-side code. For anything that requires UI, I code using web
-            technologies (pure HTML for simple webpages, Angular/JS for anything
-            requiring dynamism). If on server side I only need to aggregate data
-            from other sources, I might consider Node.js.
-          </p>
-          <p></p>
-          <h4>Other:</h4>
-          <ul>
-            <li><em>Database:</em> SQL Server (Derby, HSQL, MySQL), Oracle</li>
-            <li>
-              <em>Operating Systems:</em> Linux (Work), Windows (Work), Mac OS
-              (Personal computer), Solaris (Master thesis, work)
-            </li>
-            <li><em>IDEs:</em> IntelliJ, Eclipse. Getting used to VSCode.</li>
-            <li>
-              <em>Project Management Tools:</em> SVN/Perforce, Maven, Ant, Git,
-              Jenkins, Sonar.
-            </li>
-            <li><em>Unit test:</em> JUnit, Mockito, Cucumber</li>
-            <li><em>Others:</em> LaTeX, worked a bit with Android SDK (would love to work again with it).</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Publications</h3>
-          <ul>
-            <li>
-              Viola GG, Rodrigues L, Américo JC, Hansel G, Vargas RS, Biasibetti
-              R, Swarowsky A, Gonalves CA, Xavier LL, Achaval M, Souza DO,
-              Amaral OB. “Morphological changes in hippocampal astrocytes
-              induced by environmental enrichment in mice”. In Brain Research,
-              Volume 1274, 5 June 2009, 47-54, ISSN 0006-8993
-            </li>
-            <li>
-              Américo JC, Rudametkin W, Donsez D. “Managing the Dynamism of
-              Real-Time Java Applications on the OSGi Platform”. In Proceedings
-              of the 27th Annual ACM Symposium on Applied Computing (SAC '12).
-              ACM, New York, NY, USA, 1115-1122. DOI=10.1145/2231936.2231952
-            </li>
-            <li>
-              Calmant T, Américo JC, Donsez D, Gattaz O, Gama K. “A Dynamic and
-              Service-Oriented Component Model for Python Long-Lived
-              Applications”. In Proceedings of the 15th ACM SIGSOFT symposium on
-              Component Based Software Engineering (CBSE '12). ACM, New York,
-              NY, USA, 35-40. DOI=10.1145/2304736.2304744
-            </li>
-            <li>
-              Américo JC, Donsez D. “Service Component Architecture Extensions
-              for Dynamic Systems”. In Proceedings of the 10th international
-              conference on Service-Oriented Computing (ICSOC'12), Chengfei Liu,
-              Heiko Ludwig, Farouk Toumani, and Qi Yu (Eds.). Springer-Verlag,
-              Berlin, Heidelberg, 32-47. DOI=10.1007/978-3-642-34321-6_3
-            </li>
-            <li>
-              Calmant T, Américo JC, Donsez D, Gattaz O. "A Dynamic SCA­-Based
-              System for Smart Homes and Offices". In Service-Oriented Computing
-              - ICSOC 2012 Workshops - Lecture Notes in Computer Science Volume
-              7759, 2013, 435-438. DOI=10.1007/978-3-642-37804-1_47
-            </li>
-          </ul>
-        </article>
-        <article>
-          <h3>Patents (in French)</h3>
-          <ul>
-            <li>
-              <a
-                href="http://bases-brevets.inpi.fr/en/document/FR3012896.html"
-                target="_blank"
-                ><em>FR3012896</em></a
-              >
-              - Procédé de validation du temps de réponse d'une application,
-              procédé de déploiement d'une application comportant un tel procédé
-              de validation, programme d'ordinateur et dispositifs
-              correspondants.
-            </li>
-            <li>
-              <a
-                href="https://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&NR=2016092174A1&KC=A1&FT=D&locale=fr_EP"
-                target="_blank"
-              >
-                <em>FR3029658</em>
-              </a>
-              - Système et méthode de transformation de code octal Java en code
-              octal Java temps-réel
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section id="contact" class="closed">
-        <article>
-          Please send your messages to jc@jcamerico.com or send me an InMail on
-          <a href="http://www.linkedin.com/in/jcamerico">LinkedIn</a>.
-        </article>
-      </section>
-    </div>
-    <footer class="w3-container, w3-black">
-      <p>
-        Developed by myself with some very quick and basic HTML5, CSS3 and
-        Javascript. Code source is on
-        <a href="http://github.com/jcamerico/website">Github</a>. Powered by
-        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
-          >w3.css</a
-        >.
-      </p>
+    <section id="about" class="container">
+      <article>
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="imgs/jc.jpg" alt="João Claudio Américo" class="portrait">
+          </div>
+          <div class="col-lg-6">
+            <h3>Hi! I'm João Américo.</h3>
+            <p>I'm a Senior Software Engineer at <a href="https://www.murex.com/">Murex</a>.</p>
+            <p>I have obtained a PhD degree in Computer Science from the University of Grenoble in 2013.</p>
+            <p>I have also a Master degree from <a href="https://ensimag.grenoble-inp.fr/">ENSIMAG</a> with <em>Mention bien</em> and a Bachelor degree from UFRGS with <em>summa cum laude</em> (laurea acadêmica).</p>
+            <p>When I'm not coding, I am probably reading, playing volleyball or gaming.</p>
+            <a href="cv/cv.pdf" class="btn btn-outline-info" download="cv.pdf">Download CV <i class="far fa-file"></i></a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <hr class="section-separator">
+    <section id="cv">
+      <article id="work" class="container">
+        <h2 class="section-header">Work Experience</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card mb-3">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-lg-auto">
+                    <img src="/imgs/ufrgs.png" class="company-logo" alt="UFRGS">
+                  </div>
+                </div>
+              </div>          
+              <div class="card-body">
+                <h5 class="card-title">Intern at UFRGS Biochemistry Dept</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Porto Alegre, Brazil</h6>
+                <h6 class="card-subtitle mb-2 text-muted">2003-2008</h6>
+                <p class="card-text">Internship supervised by <a href="http://lattes.cnpq.br/9534019126486839">Prof. Dr. Diogo Onofre Gomes de Souza</a>.</p>
+                <p class="card-text">In the beginning, my activities were mostly manipulation of chemical compounds and animal experimentation.</p>
+                <p class="card-text">Then, during my studies in Computer Science, I started to mainly perform computer-related activities (article redaction, data manipulation, website administration and software development for imaging analysis.</p>
+                <hr>
+                <p>
+                  <span class="badge badge-info">Python</span>
+                  <span class="badge badge-info">Pascal/Delphi</span>
+                  <span class="badge badge-info">HTML</span>  
+                </p>          
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card mb-3">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-lg-auto">
+                    <img src="/imgs/bull.png" class="company-logo" alt="Bull">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Intern at Bull</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Grenoble, France</h6>
+                <h6 class="card-subtitle mb-2 text-muted">2009</h6>
+                <p class="card-text">Internship supervised by <a href="https://rudametw.github.io/">Dr. Walter Rudametkin</a> and <a href="https://www.linkedin.com/in/fran%C3%A7ois-exertier-3364413">Dr. François Exertier</a>.</p>
+                <p class="card-text">This internship consisted in creating a real-time prototype of the JOnAS 5 Application Server, by injecting RTSJ-compliant byte-code at run-time.</p>
+                <hr>
+                <p>
+                  <span class="badge badge-info">Java</span>
+                  <span class="badge badge-info">Byte-code</span>
+                  <span class="badge badge-info">Real-time</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card mb-3">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-lg-auto">
+                    <img src="/imgs/lig.jpg" class="company-logo" alt="LIG">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Intern at LIG, Adele Team</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Grenoble, France</h6>
+                <h6 class="card-subtitle mb-2 text-muted">2010</h6>
+                <p class="card-text">Internship supervised by <a href="https://rudametw.github.io/">Dr. Walter Rudametkin</a> and <a href="https://lig-membres.imag.fr/donsez/">Prof. Dr. Didier Donsez</a>.</p>
+                <p class="card-text">This internship consisted of studying the impacts of real-time constraints in OSGi and, at same time, the impact of OSGi's dynamism in real-time Java applications.</p>
+                <hr>
+                <span class="badge badge-info">Java</span>
+                <span class="badge badge-info">OSGi</span>
+                <span class="badge badge-info">Real-time</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card mb-3">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-lg-auto">
+                    <img src="/imgs/bull.png" class="company-logo" alt="Bull">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">R&D Engineer at Bull</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Grenoble, France</h6>
+                <h6 class="card-subtitle mb-2 text-muted">2010-2013</h6>
+                <p class="card-text">My PhD project was financed by Bull SAS.</p>
+                <p class="card-text">I worked on adding the support to real-time SCA applications on top of OSGi.</p>
+                <hr>
+                <span class="badge badge-info">Java</span>
+                <span class="badge badge-info">OSGi</span>
+                <span class="badge badge-info">Felix</span>
+                <span class="badge badge-info">Karaf</span>
+                <span class="badge badge-info">Aries</span>
+                <span class="badge badge-info">SCA</span>
+                <span class="badge badge-info">Real-time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-lg-auto">
+                <img src="/imgs/murex.png" class="company-logo" alt="Murex">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Senior Software Engineer at Murex</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Paris, France</h6>
+            <h6 class="card-subtitle mb-2 text-muted">2013-present</h6>
+            <p class="card-text">System Architect and Lead Developer of MX.3's workflow engine.</p>
+            <p class="card-text">I lead a team of seven developers, distributed in three countries. I am also the operational manager of some of these developers.</p>
+            <p>My daily work involves the following topics:</p>
+            <ul>
+              <li>Java (used all versions from 6 to 11)</li>
+              <li>
+                Analysing technical and performance issues arising from
+                distributed and multithreaded applications
+              </li>
+              <li>
+                Continuous integration/deployment solutions like Jenkins/CJE
+              </li>
+              <li>
+                Messaging-based integration solutions for Java like Apache Camel
+                and JMS
+              </li>
+              <li>Dependency injection (through Spring and CDI)</li>
+              <li>
+                Project management tools like Git/Perforce, Apache Maven, Sonar
+              </li>
+              <li>TDD (Junit), BDD (Cucumber)</li>
+              <li>
+                Agile/Scrum methodologies, from daily stand ups to retrospective
+                facilitation
+              </li>
+              <li>Operational management tasks in general (support, regular one-to-ones and continuous feedback)</li>
+              <li>Technical design and documentation</li>
+              <li>Level 3 support</li>
+            </ul>
+            <hr>
+            <span class="badge badge-info">Java</span>
+            <span class="badge badge-info">Jenkins</span>
+            <span class="badge badge-info">Camel</span>
+            <span class="badge badge-info">JMS</span>
+            <span class="badge badge-info">Spring</span>
+            <span class="badge badge-info">Git</span>
+            <span class="badge badge-info">Perforce</span>
+            <span class="badge badge-info">Maven</span>
+            <span class="badge badge-info">Sonarqube</span>
+            <span class="badge badge-info">Cucumber</span>
+            <span class="badge badge-info">Agile</span>
+          </div>
+        </div>
+      </article>
+      <hr class="section-separator">
+      <article id="education" class="container">
+        <h2 class="section-header">Educational background</h2>
+        <div class="row">
+          <div class="col">
+            <div class="card mb-3">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-lg-auto">
+                    <img src="/imgs/ufrgs.png" class="company-logo" alt="UFRGS">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">BsC in Computer Science, UFRGS</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Porto Alegre, Brazil</h6>
+                <h6 class="card-subtitle mb-2 text-muted">2005-2010</h6>
+                <p class="card-text">Nine-semester program, in which we had courses about the main domains of Computer Science (Computational theory, Artificial Intelligence, Computer Graphics, Image Processing, Operating Systems, Algorithm Complexity, etc).</p>
+                <p class="card-text">Obtained <em>summa cum laude</em> and <em>highlight student awards</em>.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-lg-auto">
+                    <img src="/imgs/ensimag.png" class="company-logo" alt="ENSIMAG">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Engineer in Information Systems, ENSIMAG</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Grenoble, France</h6>
+                <h6 class="card-subtitle mb-2 text-muted">2008-2010</h6>
+                <p class="card-text">Obtained Engineer (academic specialization in
+                  Information Systems Engineering) and Master (specialization in
+                  Information Systems and Advanced Software Engineering) degrees, with Mention Bien.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-lg-auto">
+                    <img src="/imgs/uga.jpg" class="company-logo" alt="Université de Grenoble">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Doctor in Computer Science, Université de Grenoble</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Grenoble, France</h6>
+                <h6 class="card-subtitle mb-2 text-muted">2010-2013</h6>
+                <p class="card-text">My thesis was entitled <em>"A component meta-model for the design of flexible and modular real-time applications"</em>.
+                <p class="card-text">It was supervised by Prof. Dr. Didier Donsez.</p>
+                <a href="files/AmericoThesis.pdf" class="btn btn-outline-info" download="Phd-Thesis-Americo-Joao.pdf">Download thesis <i class="far fa-file"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <hr class="section-separator">
+      <article id="competences" class="container">
+        <h2 class="section-header">Competences</h2>
+        <div class="row">
+          <div class="col">
+            <div class="card mb-3">
+              <h5 class="card-header">Languages</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  <img src="/imgs/brazil.png" class="language-icon" alt="Brazil">
+                  <strong>Portuguese</strong>: Native
+                </p>
+                <p class="card-text">
+                  <img src="/imgs/uk.png" class="language-icon" alt="United Kindgom">
+                  <strong>English</strong>: Fluent (TOEIC Gold level)
+                </p>
+                <p class="card-text"> 
+                  <img src="/imgs/france.png" class="language-icon" alt="France">
+                  <strong>French:</strong> Fluent (CECR C1 Level)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3">
+              <h5 class="card-header">Web Technologies</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  I am a self-taught <strong>Javascript</strong>, <strong>CSS</strong> and <strong>HTML</strong> developer.
+                </p>
+                <p class="card-text">
+                  On some of my free time, I have been playing with Javascript frameworks (like <strong>Node.js</strong> and <strong>Angular</strong>).
+                </p>
+                <p class="card-text">
+                  I am also familiar with <strong>Java</strong> web technologies like JSP, Servlets, JSF, XML, XHTML, GWT, Web Services and Springboot.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3">
+              <h5 class="card-header">Programming languages</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  <strong>Java</strong> is definitely my go-to programming language for server-side code.
+                  For anything that requires UI, I like web technologies (HTML, CSS, Angular/JS if dynamism is required). 
+                  If on server side I only need to aggregate data from other sources, I might consider Node.js.
+                </p>
+                <p class="card-text">
+                  I also like to code in <strong>Python</strong> and <strong>Javascript</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <h5 class="card-header">Other</h5>
+          <div class="card-body">
+            <ul>
+              <li><em>Database:</em> SQL Server (Sybase, HSQL, MySQL), Oracle</li>
+              <li><em>Project Management:</em> SVN/Perforce, Maven, Ant, Git, Jenkins, Sonar.</li>
+              <li><em>Unit test:</em> JUnit, Mockito, Cucumber</li>
+              <li><em>Others:</em> LaTeX, worked a bit with Android SDK (would love to work again with it).</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <hr class="section-separator">
+      <article id="publications" class="container">
+        <h2 class="section-header">Publications</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Viola GG, Rodrigues L, <strong>Américo JC</strong>, Hansel G, Vargas RS, Biasibetti
+            R, Swarowsky A, Gonalves CA, Xavier LL, Achaval M, Souza DO,
+            Amaral OB. “Morphological changes in hippocampal astrocytes
+            induced by environmental enrichment in mice”. In Brain Research,
+            Volume 1274, 5 June 2009, 47-54, ISSN 0006-8993
+          </li>
+          <li class="list-group-item">
+            <strong>Américo JC</strong>, Rudametkin W, Donsez D. “Managing the Dynamism of
+            Real-Time Java Applications on the OSGi Platform”. In Proceedings
+            of the 27th Annual ACM Symposium on Applied Computing (SAC '12).
+            ACM, New York, NY, USA, 1115-1122. DOI=10.1145/2231936.2231952
+          </li>
+          <li class="list-group-item">
+            Calmant T, <strong>Américo JC</strong>, Donsez D, Gattaz O, Gama K. “A Dynamic and
+            Service-Oriented Component Model for Python Long-Lived
+            Applications”. In Proceedings of the 15th ACM SIGSOFT symposium on
+            Component Based Software Engineering (CBSE '12). ACM, New York,
+            NY, USA, 35-40. DOI=10.1145/2304736.2304744
+          </li>
+          <li class="list-group-item">
+            <strong>Américo JC</strong>, Donsez D. “Service Component Architecture Extensions
+            for Dynamic Systems”. In Proceedings of the 10th international
+            conference on Service-Oriented Computing (ICSOC'12), Chengfei Liu,
+            Heiko Ludwig, Farouk Toumani, and Qi Yu (Eds.). Springer-Verlag,
+            Berlin, Heidelberg, 32-47. DOI=10.1007/978-3-642-34321-6_3
+          </li>
+          <li class="list-group-item">
+            Calmant T, <strong>Américo JC</strong>, Donsez D, Gattaz O. "A Dynamic SCA­-Based
+            System for Smart Homes and Offices". In Service-Oriented Computing
+            - ICSOC 2012 Workshops - Lecture Notes in Computer Science Volume
+            7759, 2013, 435-438. DOI=10.1007/978-3-642-37804-1_47
+          </li>
+        </ul>
+      </article>
+      <hr class="section-separator">
+      <article id="patents" class="container">
+        <h2 class="section-header">Patents</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a
+              href="http://bases-brevets.inpi.fr/en/document/FR3012896.html"
+              target="_blank"
+              ><em>FR3012896</em></a
+            >
+            - Procédé de validation du temps de réponse d'une application,
+            procédé de déploiement d'une application comportant un tel procédé
+            de validation, programme d'ordinateur et dispositifs
+            correspondants.
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&NR=2016092174A1&KC=A1&FT=D&locale=fr_EP"
+              target="_blank"
+            >
+              <em>FR3029658</em>
+            </a>
+            - Système et méthode de transformation de code octal Java en code
+            octal Java temps-réel
+          </li>
+        </ul>
+      </article>
+    </section>
+    <footer id="contact" class="colored-panel">
+      <article class="container">
+        <h1>Contact me!</h1>
+        <div>
+          <a href="http://www.linkedin.com/in/jcamerico"><i class="fab fa-linkedin fa-3x social-icon"></i></a>
+          <a href="mailto://jc@jcamerico.com"><i class="fas fa-envelope fa-3x social-icon"></i></a>
+          <a href="http://github.com/jcamerico/"><i class="fab fa-github fa-3x social-icon"></i></a>
+          <a href="https://www.instagram.com/jcamerico/"><i class="fab fa-instagram fa-3x social-icon"></i></a>
+          <a href="https://twitter.com/andjcsaid"><i class="fab fa-twitter fa-3x social-icon"></i></a>
+        </div>
+        <p>Developed with HTML5, CSS3 and Bootstrap. Code source is on <a href="http://github.com/jcamerico/website">Github</a>.</p>
+        <p>Country flag icons were made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>.</p>
+        <p>© Copyright 2020, João Américo</p>
+      </article>
     </footer>
   </body>
 </html>
